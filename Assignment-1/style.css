@@ -199,55 +199,154 @@ nav a:hover{text-decoration:underline}
 
 .testimonial p{font-style:italic;margin:0 0 .5rem}
 
-/* ===== Contact / Form ===== */
-.contact{padding:3rem 2rem;
-    background:url('images/contact-bg.jpg') center/cover no-repeat
+/* ===== Booking Section ===== */
+.booking {
+  padding: 3rem 2rem;
+  background: url('images/contact-bg.jpg') center/cover no-repeat;
 }
 
-.contact h2{text-align:center;
-    color:var(--brand);
-    margin:0 0 1.25rem
+.booking h2 {
+  text-align: center;
+  color: var(--brand);
+  margin: 0 0 1.25rem;
 }
 
-.form-box{max-width:980px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;gap:1.5rem;background:rgba(255,255,255,.96);
-    padding:2rem;
-    border-radius:12px;
-    box-shadow:0 4px 16px rgba(0,0,0,.1)
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-form label{display:block;
-    margin:.5rem 0 .25rem;
-    font-weight:700
+.form-container form label {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+  font-weight: 700;
 }
 
-form input,form select,form textarea{
-    width:100%;
-    padding:.7rem;
-    border:1px solid #d1d5db;
-    border-radius:.5rem;
-    margin-bottom:.75rem
+.form-container form input,
+.form-container form select,
+.form-container form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
-form button{background:var(--brand);
-    color:#fff;
-    border:none;
-    padding:1rem;
-    border-radius:.5rem;
-    cursor:pointer;
-    width:100%
+.form-container form button {
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-form button:hover{background:var(--brand-2)}
+.form-container form button:hover {
+  background: var(--brand-2);
+}
 
-.contact-info{display:flex;align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:1rem;
-    background:#f3f4f6;
-    border-radius:.75rem
+/* ===== Contact Section ===== */
+.contact {
+  padding: 3rem 2rem;
+  background: #f9fafb;
+}
+
+.contact h2 {
+  text-align: center;
+  color: var(--brand);
+  margin: 0 0 2rem;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.contact-info {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.contact-info h3 {
+  color: var(--brand);
+  margin: 0 0 1rem;
+}
+
+.contact-info p {
+  margin: 0 0 1rem;
+  line-height: 1.6;
+}
+
+.contact-info a {
+  color: var(--brand-2);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.quick-contact {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.quick-contact h3 {
+  color: var(--brand);
+  margin: 0 0 1rem;
+}
+
+.quick-contact form label {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+  font-weight: 700;
+}
+
+.quick-contact form input,
+.quick-contact form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.quick-contact form button {
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+}
+
+.quick-contact form button:hover {
+  background: var(--brand-2);
+}
+
+/* ===== Responsive Updates ===== */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ===== Footer ===== */
@@ -269,6 +368,6 @@ form button:hover{background:var(--brand-2)}
   .form-box{grid-template-columns:1fr}
 
   .hero{min-height:70vh}
-  
+
   .hero-text{margin:1rem}
 }

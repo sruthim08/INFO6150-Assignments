@@ -124,6 +124,7 @@
                   frameborder="0" 
                   allowfullscreen>
           </iframe>
+
           <details>
             <summary>What you'll learn</summary>
             <p>How to connect to data, write basic SQL, and build your first bar chart in Power BI.</p>
@@ -165,53 +166,86 @@
       </div>
     </section>
 
-    <!-- Contact / Form (text, email, password, datalist, tel/mailto links) -->
-    <section id="contact" class="contact" aria-label="Contact">
-      <h2>Book a Session or Request a Service</h2>
-      <div class="form-box">
-        <form action="#" method="post">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
+    <!-- Replace your current contact section with these two sections -->
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+<!-- Booking Section -->
+<section id="booking" class="booking" aria-label="Booking">
+  <h2>Book a Session or Request a Service</h2>
+  <div class="form-container">
+    <form action="#" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
 
-          <label for="password">Create Password</label>
-          <input type="password" id="password" name="password" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
 
-          <label for="topic">Topic (type to see suggestions)</label>
-          <input list="topics" id="topic" name="topic" placeholder="e.g., SQL, Tableau" />
-          <datalist id="topics">
-            <option value="SQL" />
-            <option value="Python" />
-            <option value="Power BI" />
-            <option value="Tableau" />
-          </datalist>
+      <label for="password">Create Password</label>
+      <input type="password" id="password" name="password" required />
 
-          <label for="service">Service</label>
-          <select id="service" name="service">
-            <option value="tutoring">One-on-One Tutoring</option>
-            <option value="dashboard">Dashboard Creation</option>
-            <option value="etl">ETL Pipeline Help</option>
-          </select>
+      <label for="topic">Topic (type to see suggestions)</label>
+      <input list="topics" id="topic" name="topic" placeholder="e.g., SQL, Tableau" />
+      <datalist id="topics">
+        <option value="SQL" />
+        <option value="Python" />
+        <option value="Power BI" />
+        <option value="Tableau" />
+      </datalist>
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Tell us what you need..."></textarea>
+      <label for="service">Service</label>
+      <select id="service" name="service">
+        <option value="tutoring">One-on-One Tutoring</option>
+        <option value="dashboard">Dashboard Creation</option>
+        <option value="etl">ETL Pipeline Help</option>
+      </select>
 
-          <button type="submit">Submit</button>
-        </form>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Tell us what you need..."></textarea>
 
-        <div class="contact-info">
-          <p>
-            Prefer a quick chat? Call us at
-            <a href="tel:+123456789">+1 234 567 89</a>
-            or email
-            <a href="mailto:info@datalearnhub.com">info@datalearnhub.com</a>.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
+      <button type="submit">Submit Booking</button>
+    </form>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact" aria-label="Contact">
+  <h2>Get in Touch</h2>
+  <div class="contact-container">
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <p>
+        <strong>Phone:</strong> <a href="tel:+123456789">+1 234 567 89</a>
+      </p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:info@datalearnhub.com">info@datalearnhub.com</a>
+      </p>
+      <p>
+        <strong>Business Hours:</strong><br>
+        Monday - Friday: 9:00 AM - 6:00 PM<br>
+        Saturday: 10:00 AM - 4:00 PM<br>
+        Sunday: Closed
+      </p>
+      <p>
+        <strong>Response Time:</strong> We typically respond within 24 hours
+      </p>
+    </div>
+    
+    <div class="quick-contact">
+      <h3>Quick Contact</h3>
+      <form action="#" method="post">
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" name="contact-name" required />
+        
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" name="contact-email" required />
+        
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="contact-message" rows="4" placeholder="How can we help you?"></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
 
   <!-- Semantic Footer -->
   <footer class="site-footer">
