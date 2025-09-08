@@ -1,129 +1,76 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DataLearn Hub</title>
-  <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Header -->
   <header>
-    <h1>📊 DataLearn Hub</h1>
+    <div class="logo">📊 DataLearn Hub</div>
     <nav>
       <a href="#home">Home</a>
       <a href="#services">Services</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#about">About</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- Home Section -->
-  <section id="home">
-    <h2>Learn Data. Apply Data. Grow with Data.</h2>
-    <p>Your one-stop platform for data analytics learning and services.</p>
-    <button onclick="document.getElementById('sessionForm').scrollIntoView()">Book a Session</button>
-    <button onclick="document.getElementById('services').scrollIntoView()">Request a Service</button>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="overlay">
+      <h1>Learn Data. Apply Data. Grow with Data.</h1>
+      <p>Personalized tutoring and services for aspiring Data Analysts.</p>
+      <button>Book a Session</button>
+      <button>Request a Service</button>
+    </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <table>
-      <tr>
-        <th>Package</th>
-        <th>Includes</th>
-        <th>Price</th>
-      </tr>
-      <tr>
-        <td>Basic</td>
-        <td>Data Cleaning & Reports</td>
-        <td>$100</td>
-      </tr>
-      <tr>
-        <td>Advanced</td>
-        <td>Dashboards (Power BI/Tableau)</td>
-        <td>$300</td>
-      </tr>
-      <tr>
-        <td>Premium</td>
-        <td>End-to-End ETL & Analytics</td>
-        <td>$500</td>
-      </tr>
-    </table>
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <h2>Why Our Students Love Us</h2>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <p>"The one-on-one sessions were a game changer. I finally understood SQL clearly!"</p>
+        <h4>- Priya S.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Clean dashboards, clear explanations, and tons of patience. Highly recommend!"</p>
+        <h4>- Arjun M.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Helped me crack my internship interview with confidence. Thank you!"</p>
+        <h4>- Emily R.</h4>
+      </div>
+    </div>
   </section>
 
-  <!-- Teaching Section -->
-  <section id="teaching">
-    <h2>Teaching & Learning</h2>
-    <article>
-      <h3>SQL Basics</h3>
-      <p>Learn how to query and manage databases effectively.</p>
-    </article>
+  <!-- Booking Section -->
+  <section id="contact" class="contact">
+    <h2>Book a Session or Request a Service</h2>
+    <div class="form-box">
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
 
-    <article>
-      <h3>Data Visualization</h3>
-      <p>Create interactive dashboards in Power BI and Tableau.</p>
-    </article>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-    <video width="400" controls>
-      <source src="intro.mp4" type="video/mp4">
-      Your browser does not support video.
-    </video>
+        <label for="service">Service</label>
+        <select id="service" name="service">
+          <option value="one-on-one">One-on-One Tutoring</option>
+          <option value="dashboard">Dashboard Creation</option>
+          <option value="etl">ETL Pipeline Help</option>
+        </select>
 
-    <audio controls>
-      <source src="motivation.mp3" type="audio/mpeg">
-      Your browser does not support audio.
-    </audio>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4"></textarea>
 
-    <details>
-      <summary>FAQ: How do I book a session?</summary>
-      <p>Fill in the booking form below with your details and topic preference.</p>
-    </details>
-
-    <!-- Booking Form -->
-    <form id="sessionForm">
-      <h3>Book a One-on-One Session</h3>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-
-      <label for="topic">Choose Topic:</label>
-      <input list="topics" id="topic" name="topic">
-      <datalist id="topics">
-        <option value="Python">
-        <option value="SQL">
-        <option value="Power BI">
-        <option value="Tableau">
-      </datalist>
-
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <figure>
-      <img src="instructor.jpg" alt="Instructor" width="200">
-      <figcaption>Sruthi Muruganantham – Data Analyst & Instructor</figcaption>
-    </figure>
-    <p>With years of experience in data analytics and consulting, I help students and professionals bridge the gap between theory and practice.</p>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:info@datalearnhub.com">info@datalearnhub.com</a></p>
-    <p>Phone: <a href="tel:+123456789">+1 234 567 89</a></p>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -132,5 +79,3 @@
   </footer>
 </body>
 </html>
-
-
