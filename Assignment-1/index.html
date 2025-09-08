@@ -104,40 +104,47 @@
       </table>
     </section>
 
-    <!-- Resources: Image (Figure/Figcaption), Video, Audio, Details/Summary, Hyperlink -->
-    <section id="resources" class="resources" aria-label="Learning resources">
-      <h2>Free Resources</h2>
-      <div class="resources-grid">
-        <figure>
-          <img src="images/sql-cheatsheet.jpg" alt="SQL cheat sheet preview" />
-          <figcaption>Download our SQL Cheat Sheet (PDF)</figcaption>
-          <a href="files/sql-cheatsheet.pdf" class="btn-secondary">Download</a>
-        </figure>
+   <!-- Resources: Image (Figure/Figcaption), Video, Audio, Details/Summary, Hyperlink -->
+<section id="resources" class="resources" aria-label="Learning resources">
+  <h2>Free Resources</h2>
+  <div class="resources-grid">
+    <div style="width: 100%; overflow: hidden;">
+      <div style="display: flex; gap: 20px; flex-wrap: wrap; width: 100%;">
 
-        <article class="media">
+     <figure style="flex: 1; min-width: 200px; padding: 10px; box-sizing: border-box;">
+     <img src="images/sql-cheatsheet.png" alt="SQL cheat sheet preview" />
+     <figcaption>Download our SQL Cheat Sheet (PDF)</figcaption>
+     <a href="sql-cheatsheet.pdf" class="btn-secondary" style="display: block; position: static; margin-top: 1px;">Download</a>
+     </figure>
+
+        <article class="media" style="flex: 1; min-width: 300px; padding: 20px; box-sizing: border-box;">
           <h3>Quick Start Video</h3>
-          <video controls width="320">
-            <source src="media/intro.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <iframe width="100%" height="180" 
+                  src="https://www.youtube.com/embed/gcF31GuwSEs" 
+                  frameborder="0" 
+                  allowfullscreen>
+          </iframe>
           <details>
             <summary>What you'll learn</summary>
             <p>How to connect to data, write basic SQL, and build your first bar chart in Power BI.</p>
           </details>
         </article>
 
-        <article class="media">
-          <h3>Focus Music</h3>
-          <audio controls>
-            <source src="media/lofi.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
-          </audio>
-          <p>Study better with our curated lofi playlist.</p>
+        <article class="media" style="flex: 1; min-width: 300px; padding: 20px; box-sizing: border-box;">
+          <h3>Data Modeling Audio</h3>
+          <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1664461998&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">      
+          </iframe>
+          <p>The What and Why of Data Modeling - Important Aspect of Data Analytics</p>
         </article>
+        
       </div>
-
-      <p class="ext-link">More guides on our <a href="https://example.com/blog" target="_blank" rel="noopener">Learning Blog</a>.</p>
-    </section>
+      
+      <div style="clear: both; width: 100%; margin-top: 20px;">
+        <p class="ext-link" style="float: none; display: block;">More guides on our <a href="https://example.com/blog" target="_blank" rel="noopener">Learning Blog</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Testimonials -->
     <section id="testimonials" class="testimonials" aria-label="Testimonials">
