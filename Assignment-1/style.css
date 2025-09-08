@@ -1,0 +1,54 @@
+body {
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+h2 {
+color: #003366;
+margin-bottom: 1rem;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 1rem;
+}
+table, th, td {
+border: 1px solid #ccc;
+}
+th, td {
+padding: 0.75rem;
+text-align: center;
+}
+button {
+background: #003366;
+color: #fff;
+border: none;
+padding: 10px 20px;
+margin: 10px 5px;
+cursor: pointer;
+border-radius: 5px;
+font-size: 1rem;
+}
+button:hover {
+background: #0055aa;
+}
+form input, form button, form datalist {
+margin: 10px 0;
+padding: 8px;
+width: 100%;
+max-width: 400px;
+display: block;
+}
+figure {
+text-align: center;
+}
+figcaption {
+font-style: italic;
+margin-top: 0.5rem;
+}
+footer {
+background: #003366;
+color: #fff;
+text-align: center;
+padding: 1rem;
+margin-top: 2rem;
+}
