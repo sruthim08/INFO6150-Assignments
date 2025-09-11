@@ -14,10 +14,10 @@
   <!-- Semantic Header -->
 <header class="site-header">
   <div class="logo">
-    <a href="#home" aria-label="DataLearn Hub Home">
-      <img src="images/favicon.png" alt="DataLearn Hub" width="24" height="24" style="vertical-align: middle; margin-right: 8px;">
+    <a href="#home" aria-label="DataLearn Hub Home" style="display: flex; align-items: center; white-space: nowrap;"></a>
+      <img src="images/favicon.png" alt="DataLearn Hub" width="24" height="24" style=" margin-right: 8px;">
       DataLearn Hub
-    </a>
+    </a> <!--relative url is used here-->
   </div>
     <nav aria-label="Main navigation">
       <a href="#home">Home</a>
@@ -36,7 +36,7 @@
         <h1>Learn Data. Apply Data. Grow with Data.</h1>
         <p>Personalized tutoring and professional analytics services for students and businesses.</p>
         <div class="hero-actions">
-          <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Session</button>
+          <button onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})"style="background: var(--brand); color: #fff;">Book a Session</button>
           <a class="btn-secondary" href="#services">Explore Services</a>
         </div>
       </div>
@@ -50,19 +50,19 @@
           <article class="service-card" aria-labelledby="svc1">
             <h3 id="svc1">One-on-One Tutoring</h3>
             <p>Targeted help in <strong>SQL</strong>, <strong>Python</strong>, and <strong>Power BI/Tableau</strong> with custom practice sets.</p>
-            <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request This</button>
+            <button onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Request This</button>
           </article>
 
           <article class="service-card" aria-labelledby="svc2">
             <h3 id="svc2">Dashboard Creation</h3>
             <p>Design and build interactive dashboards with live data, drilldowns, and auto-refresh.</p>
-            <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request This</button>
+            <button onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Request This</button>
           </article>
 
           <article class="service-card" aria-labelledby="svc3">
             <h3 id="svc3">End-to-End ETL</h3>
             <p>Data cleaning, transformation, and automated pipelines for analytics-ready datasets.</p>
-            <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request This</button>
+            <button onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Request This</button>
           </article>
         </div>
 
