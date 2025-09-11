@@ -200,14 +200,43 @@ nav a.cta:hover {
   background: var(--brand-2) !important;
   transform: translateY(-1px);
 }
+
+
+/* Make each section take full viewport height */
+.pricing, .resources, .testimonials, .booking, .contact {
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  padding: 3rem 2rem;
+}
+
+
 /* ===== Sections Scroll Offset ===== */
 section {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 0;
+}
+
+
+/* Make sure content containers don't exceed viewport */
+.pricing table,
+.resources-grid,
+.testimonial-container,
+.form-container,
+.contact-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* ===== Services ===== */
-.services{padding:3rem 2rem;
-    background:url('images/bg.jpg') center/cover no-repeat
+.services {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 2rem;
+  background: url('images/bg.jpg') center/cover no-repeat;
 }
 
 .services h2{color:var(--brand);
@@ -257,16 +286,13 @@ section {
 
 .service-card:hover{transform:translateY(-6px)}
 
-.promo{background:rgba(255,255,255,.9);
-    padding:1rem 1.25rem;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,.12)
-}
 
-.promo a{text-decoration:none;font-weight:600}
 
 /* ===== Pricing (Table) ===== */
-.pricing{padding:3rem 2rem}
+.pricing{
+  background: url('images/bg.jpg') center/cover no-repeat;
+  padding:3rem 2rem
+}
 
 .pricing h2{text-align:center;
     color:var(--brand);
@@ -274,6 +300,8 @@ section {
 }
 
 .pricing table{width:100%;
+  max-width: 900px;
+    margin:0 auto;
     border-collapse:collapse;
     background:#fff;
     border-radius:12px;
@@ -288,14 +316,53 @@ section {
 
 .pricing th,.pricing td{padding:1rem;
     border-bottom:1px solid #e5e7eb;
-    text-align:left
+    text-align:center
 }
 
-.pricing thead th{background:#eef4ff}
+/* Left-align the first column (Package names) */
+.pricing th:first-child, 
+.pricing td:first-child {
+  text-align: left;
+}
+
+/* Right-align the last column (Prices) */
+.pricing th:last-child, 
+.pricing td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: var(--brand);
+}
+
+.pricing thead th {
+  background: #eef4ff;
+  font-weight: 700;
+  color: var(--brand);
+  font-size: 1.1rem;
+}
 
 /* ===== Resources (figure, video, audio, details/summary) ===== */
-.resources{padding:3rem 2rem;
-    background:#fff
+.resources {
+  min-height: auto; /* Remove full viewport height */
+  padding: 4rem 2rem; /* Keep generous padding */
+  background: #fff;
+  color: #003366;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Keep content at top */
+  background: url('images/bg.jpg') center/cover no-repeat;
+}
+
+
+/* Make sure the resources grid can fit properly */
+.resources-grid {
+ width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the grid normally */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
 }
 
 /* Subtle download button in resources section */
@@ -335,7 +402,9 @@ figure .btn-secondary:hover {
 }
 
 /* ===== Testimonials ===== */
-.testimonials{background:#f9fafb;
+.testimonials{
+  background: url('images/bg.jpg') center/cover no-repeat;
+  
     padding:3rem 2rem
 }
 
@@ -362,7 +431,7 @@ figure .btn-secondary:hover {
 /* ===== Booking Section ===== */
 .booking {
   padding: 3rem 2rem;
-  background: url('images/contact-bg.jpg') center/cover no-repeat;
+  background: url('images/bg.jpg') center/cover no-repeat;
 }
 
 .booking h2 {
@@ -414,8 +483,11 @@ figure .btn-secondary:hover {
 
 /* ===== Contact Section ===== */
 .contact {
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
   background: #f9fafb;
+  min-height: auto;
+  background: url('images/bg.jpg') center/cover no-repeat;
+
 }
 
 .contact h2 {
@@ -425,8 +497,9 @@ figure .btn-secondary:hover {
 }
 
 .contact-container {
+  width: 100%;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 2rem auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
