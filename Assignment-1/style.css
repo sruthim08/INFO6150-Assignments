@@ -58,11 +58,7 @@ a{color:var(--brand-2)}
 
 }
 
-/* Add hover effect to logo like nav items */
-.logo a:hover {
-  background-color: rgba(0, 51, 102, 0.1);
-  text-decoration: underline; /* Same underline effect */
-}
+
 
 .logo-text {
   transform: translateY(-3px); /* Move text up by 3px */
