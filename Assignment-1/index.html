@@ -1,0 +1,258 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DataLearn Hub</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <!-- External CSS only -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Semantic Header -->
+<header class="site-header">
+  <div class="logo">
+    <a href="#home" aria-label="DataLearn Hub Home" >
+      <img src="images/favicon.png" alt="DataLearn Hub" width="24" height="24" style=" margin-right: 8px;">
+      DataLearn Hub
+    </a> <!--relative url is used here-->
+  </div>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#resources">Resources</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact" class="cta">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section with background image and opaque text -->
+    <section id="home" class="hero" aria-label="Hero">
+      <div class="hero-text">
+        <h1>Learn Data. Apply Data. Grow with Data.</h1>
+        <p>Personalized tutoring and professional analytics services for students and businesses.</p>
+        <div class="hero-actions">
+          <button onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})"style="background: var(--brand); color: #fff;">Book a Session</button>
+          <a class="btn-secondary" href="#services">Explore Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section with horizontal cards and an aside -->
+    <section id="services" class="services" aria-label="Services">
+      <h2>Our Services</h2>
+      <div class="services-layout">
+        <div class="service-boxes">
+          <article class="service-card" aria-labelledby="svc1">
+            <h3 id="svc1">One-on-One Tutoring</h3>
+            <p>Targeted help in <strong>SQL</strong>, <strong>Python</strong>, and <strong>Power BI/Tableau</strong> with custom practice sets.</p>
+            <button onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Request This</button>
+          </article>
+
+          <article class="service-card" aria-labelledby="svc2">
+            <h3 id="svc2">Dashboard Creation</h3>
+            <p>Design and build interactive dashboards with live data, drilldowns, and auto-refresh.</p>
+            <button onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Request This</button>
+          </article>
+
+          <article class="service-card" aria-labelledby="svc3">
+            <h3 id="svc3">End-to-End ETL</h3>
+            <p>Data cleaning, transformation, and automated pipelines for analytics-ready datasets.</p>
+            <button onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Request This</button>
+          </article>
+        </div>
+
+        <!-- Required Semantic Aside -->
+    <aside class="industry-insight" aria-label="Industry growth information">
+      <h4>Market Demand</h4>
+      <p>Data analyst roles are projected to grow <strong>25% by 2032</strong> - faster than average for all occupations</p>
+      <small>Source: Bureau of Labor Statistics</small>
+    </aside>
+  </div>
+</section>
+
+    <!-- Pricing Table (required Table tag) -->
+    <section id="pricing" class="pricing" aria-label="Pricing">
+      <h2>Pricing</h2>
+      <table>
+        <caption>Standard packages and inclusions</caption>
+        <thead>
+          <tr>
+            <th>Package</th>
+            <th>Includes</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Basic</td>
+            <td>1 hour Tutoring, Recap Notes</td>
+            <td>$100</td>
+          </tr>
+          <tr>
+            <td>Advanced</td>
+            <td>2 hours Tutoring + Dashboard Review</td>
+            <td>$300</td>
+          </tr>
+          <tr>
+            <td>Premium</td>
+            <td>ETL Setup + Dashboard + Training</td>
+            <td>$500</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+   <!-- Resources: Image (Figure/Figcaption), Video, Audio, Details/Summary, Hyperlink -->
+<section id="resources" class="resources" aria-label="Learning resources">
+  <h2>Free Resources</h2>
+  <div class="resources-grid">
+    <div style="width: 100%; overflow: hidden;">
+      <div style="display: flex; gap: 20px; flex-wrap: wrap; width: 100%;">
+
+     <figure style="flex: 1; min-width: 200px; padding: 10px; box-sizing: border-box;">
+     <img src="images/sql-cheatsheet.png" alt="SQL cheat sheet preview" />
+     <figcaption>Download our SQL Cheat Sheet (PDF)</figcaption>
+     <a href="sql-cheatsheet.pdf" class="btn-secondary" style="display: block; position: static; margin-top: 1px;">Download</a>
+     </figure>
+
+        <article class="media" style="flex: 1; min-width: 300px; padding: 20px; box-sizing: border-box;">
+          <h3>Quick Start Video</h3>
+          <iframe width="100%" height="180" 
+                  src="https://www.youtube.com/embed/gcF31GuwSEs" 
+                  frameborder="0" 
+                  allowfullscreen>
+          </iframe>
+
+          <details>
+            <summary>What you'll learn</summary>
+            <p>How to connect to data, write basic SQL, and build your first bar chart in Power BI.</p>
+          </details>
+        </article>
+
+        <article class="media" style="flex: 1; min-width: 300px; padding: 20px; box-sizing: border-box;">
+          <h3>Data Modeling Audio</h3>
+          <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1664461998&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">      
+          </iframe>
+          <p>The What and Why of Data Modeling - Important Aspect of Data Analytics</p>
+        </article>
+        
+      </div>
+      
+      
+    </div>
+  </div>
+</section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials" aria-label="Testimonials">
+      <h2>Why Our Students Love Us</h2>
+      <div class="testimonial-container">
+        <article class="testimonial">
+          <p>“The one-on-one sessions were a game changer. I finally understood SQL clearly!”</p>
+          <h4>— Priya S.</h4>
+        </article>
+        <article class="testimonial">
+          <p>“Clean dashboards, clear explanations, and tons of patience. Highly recommend!”</p>
+          <h4>— Arjun M.</h4>
+        </article>
+        <article class="testimonial">
+          <p>“Helped me crack my internship interview with confidence. Thank you!”</p>
+          <h4>— Emily R.</h4>
+        </article>
+      </div>
+    </section>
+
+    <!-- Replace your current contact section with these two sections -->
+
+<!-- Booking Section -->
+<section id="booking" class="booking" aria-label="Booking">
+  <h2>Book a Session or Request a Service</h2>
+  <div class="form-container">
+    <form action="#" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Create Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <label for="topic">Topic (type to see suggestions)</label>
+      <input list="topics" id="topic" name="topic" placeholder="e.g., SQL, Tableau" />
+      <datalist id="topics">
+        <option value="SQL" />
+        <option value="Python" />
+        <option value="Power BI" />
+        <option value="Tableau" />
+      </datalist>
+
+      <label for="service">Service</label>
+      <select id="service" name="service">
+        <option value="tutoring">One-on-One Tutoring</option>
+        <option value="dashboard">Dashboard Creation</option>
+        <option value="etl">ETL Pipeline Help</option>
+      </select>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Tell us what you need..."></textarea>
+
+      <button type="submit">Submit Booking</button>
+    </form>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact" aria-label="Contact">
+  <h2>Get in Touch</h2>
+  <div class="contact-container">
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <p>
+        <strong>Phone:</strong> <a href="tel:+123456789">+1 234 567 89</a>
+      </p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:info@datalearnhub.com">info@datalearnhub.com</a>
+      </p>
+      <p>
+        <strong>Business Hours:</strong><br>
+        Monday - Friday: 9:00 AM - 6:00 PM<br>
+        Saturday: 10:00 AM - 4:00 PM<br>
+        Sunday: Closed
+      </p>
+      <p>
+        <strong>Response Time:</strong> We typically respond within 24 hours
+      </p>
+    </div>
+    
+    <div class="quick-contact">
+      <h3>Quick Contact</h3>
+      <form action="#" method="post">
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" name="contact-name" required />
+        
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" name="contact-email" required />
+        
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="contact-message" rows="4" placeholder="How can we help you?"></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+  <!-- Semantic Footer -->
+  <footer class="site-footer">
+    <small>&copy; 2025 DataLearn Hub • <a href="#home">Back to top</a></small>
+  </footer>
+</body>
+</html>
+
+
