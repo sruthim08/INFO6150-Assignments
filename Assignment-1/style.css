@@ -259,16 +259,18 @@ section {
 }
 
 .services-layout {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 320px; /* Main content and aside */
+  gap: 2rem;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .service-boxes{display:flex;
     justify-content:center;
     gap:20px;flex-wrap:wrap;
-    max-width: 900px;
+    
 }
 
 .service-card{background:var(--card);
@@ -282,6 +284,33 @@ section {
 
 .service-card:hover{transform:translateY(-6px)}
 
+.industry-insight {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-left: 4px solid var(--accent);
+  height: fit-content; /* Prevents it from stretching */
+  position: sticky;
+  top: 100px; /* Keeps it visible when scrolling */
+}
+
+.industry-insight h4 {
+  color: var(--brand);
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+.industry-insight p {
+  margin: 0 0 0.5rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.industry-insight small {
+  color: var(--muted);
+  font-style: italic;
+}
 
 
 /* ===== Pricing (Table) ===== */
@@ -598,5 +627,18 @@ figure .btn-secondary:hover {
   .logo img {
     width: 20px;
     height: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .services-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .industry-insight {
+    position: static;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
