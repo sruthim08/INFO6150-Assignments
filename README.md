@@ -24,16 +24,12 @@ Semantic Elements
 <article>: Service cards, testimonials, media content
 <aside>: Industry market demand information sidebar
 <footer>: Site footer with copyright
-
-
+  
 Table
-
 Pricing table with <table>, <thead>, <tbody>, <caption>, <th>, <td>
 Displays service packages, inclusions, and pricing
 
-
 Form Elements
-
 Text Input: <input type="text"> for name fields
 Email Input: <input type="email"> for email addresses
 Password Input: <input type="password"> for account creation
@@ -41,54 +37,37 @@ Datalist: <datalist id="topics"> with topic suggestions
 Select: Service selection dropdown
 Textarea: Message fields
 
-
 Images
-
 <figure> and <figcaption>: SQL cheat sheet download section
 Multiple <img> elements for favicon and content images
 
-
 Hyperlinks
-
 Navigation links (<a href="#section">)
 External links to learning blog
 Logo link to home section
 
-
 Buttons
-
 Hero action buttons
 Service request buttons
 Form submit buttons
 
-
 Audio
-
 SoundCloud embedded audio player for data modeling content
 <iframe> implementation with audio controls
 
-
 Video
-
 YouTube embedded video for quick start tutorial
 <iframe> implementation with video controls
 
-
 Details and Summary
-
 <details> and <summary> in video section
 Expandable "What you'll learn" content
 
-
 Tel and Mailto
-
 <a href="tel:+123456789">: Clickable phone number
 <a href="mailto:info@datalearnhub.com">: Clickable email address
 
-
-
 Additional Elements Used
-
 <main>: Main content wrapper
 <nav>: Navigation container
 <div>: Layout containers
@@ -100,5 +79,4 @@ Additional Elements Used
 <option>: Select options
 
 CSS Features
-
 External CSS: Single style.css file
