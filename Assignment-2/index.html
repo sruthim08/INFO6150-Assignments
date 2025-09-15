@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sruthi Muruganantham - Portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2>Sruthi Muruganantham</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>MS Information Systems Student</h1>
+                <p class="hero-subtitle">Software Engineer & Business Analyst</p>
+                <p class="hero-description">Experienced in RESTful APIs, data analysis, and stakeholder communication. Passionate about aligning technology solutions with business goals.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get In Touch</button>
+                    <button class="btn-secondary" onclick="window.open('https://app.powerbi.com/groups/me/reports/d1308f4e-8b8e-4f7b-a979-7e82e666a7db/98f522f23bcfa1b64a32?experience=power-bi', '_blank')">View Dashboard</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>MS in Information Systems student with strong skills in business analysis, SQL, and stakeholder communication. Experienced in requirements gathering, process improvement, and KPI reporting.</p>
+                        <p>Skilled in Agile methodologies, risk assessment, and translating technical results into business insights. Seeking opportunities to align technology solutions with organizational goals.</p>
+                    </div>
+                    <div class="skills-section">
+                        <h3>Technical Skills</h3>
+                        <table class="skills-table">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Technologies</th>
+                                    <th>Proficiency</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Programming</td>
+                                    <td>Java, Python, R, C</td>
+                                    <td>Advanced</td>
+                                </tr>
+                                <tr class="highlight-row">
+                                    <td>Analytics</td>
+                                    <td>SQL, Power BI, Tableau, Excel</td>
+                                    <td>Expert</td>
+                                </tr>
+                                <tr>
+                                    <td>Frameworks</td>
+                                    <td>Spring Boot, JUnit, Angular</td>
+                                    <td>Advanced</td>
+                                </tr>
+                                <tr class="highlight-row">
+                                    <td>Database</td>
+                                    <td>MySQL, PostgreSQL</td>
+                                    <td>Advanced</td>
+                                </tr>
+                                <tr>
+                                    <td>Cloud & DevOps</td>
+                                    <td>AWS CloudWatch, Git</td>
+                                    <td>Intermediate</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aside - Education & Achievements -->
+            <aside class="education-aside">
+                <div class="aside-content">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <h4>Master of Science in Information Systems</h4>
+                        <p>Northeastern University, Boston</p>
+                        <span>Jan 2025 – May 2027</span>
+                    </div>
+                    <div class="education-item">
+                        <h4>Bachelor of Technology in IT</h4>
+                        <p>University College of Engineering, India</p>
+                        <span>Sept 2018 – Jun 2022</span>
+                    </div>
+                    <div class="achievement">
+                        <h4>Key Achievement</h4>
+                        <p>Placement Coordinator for IT Department (2021-2022)</p>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>System Engineer</h3>
+                            <h4>Infosys / Northwestern Mutual Funds</h4>
+                            <span class="timeline-date">Jan 2024 – Dec 2024</span>
+                            <ul>
+                                <li>Engineered RESTful APIs enhancing data consistency by 80%</li>
+                                <li>Deployed AWS CloudWatch solutions reducing incident response by 40%</li>
+                                <li>Constructed SQL-based reports enabling data-driven decisions</li>
+                                <li>Presented performance insights influencing strategic decisions</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Technical Support</h3>
+                            <h4>Infosys / Northwestern Mutual Funds</h4>
+                            <span class="timeline-date">July 2023 – Oct 2023</span>
+                            <ul>
+                                <li>Implemented automated monitoring across 12 environments</li>
+                                <li>Streamlined incident management improving efficiency by 65%</li>
+                                <li>Verified 50+ checkouts achieving 95% success rate</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h3>E-commerce Customer Service Application</h3>
+                        <p>Full-stack application with Angular frontend, Spring Boot backend, and MySQL integration. Features secure authentication and cart management.</p>
+                        <div class="project-tech">
+                            <span>Angular</span>
+                            <span>Spring Boot</span>
+                            <span>MySQL</span>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <h3>Nudity Detection System</h3>
+                        <p>Pixel-based detection system processing YCbCr space with 91% accuracy. Includes automated content moderation and alert notifications.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Computer Vision</span>
+                            <span>Image Processing</span>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <h3>Hotel Management System</h3>
+                        <p>Comprehensive booking system with real-time availability management, secure authentication, and income reporting features.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Database Design</span>
+                            <span>Authentication</span>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <h3>Power BI Dashboard</h3>
+                        <p>Interactive business intelligence dashboard providing comprehensive data insights and analytics for strategic decision making.</p>
+                        <div class="project-tech">
+                            <span>Power BI</span>
+                            <span>Data Analysis</span>
+                            <span>Business Intelligence</span>
+                        </div>
+                        <button class="project-btn" onclick="window.open('https://app.powerbi.com/groups/me/reports/d1308f4e-8b8e-4f7b-a979-7e82e666a7db/98f522f23bcfa1b64a32?experience=power-bi', '_blank')">View Dashboard</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2>Project Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/ecommerce-app.jpg" alt="E-commerce Application Interface">
+                        <div class="gallery-overlay">
+                            <h4>E-commerce App</h4>
+                            <p>Angular & Spring Boot</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/detection-system.jpg" alt="Nudity Detection System">
+                        <div class="gallery-overlay">
+                            <h4>Detection System</h4>
+                            <p>Computer Vision</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/hotel-system.jpg" alt="Hotel Management Dashboard">
+                        <div class="gallery-overlay">
+                            <h4>Hotel Management</h4>
+                            <p>Full Stack Application</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/powerbi-dashboard.jpg" alt="Power BI Analytics Dashboard">
+                        <div class="gallery-overlay">
+                            <h4>Analytics Dashboard</h4>
+                            <p>Power BI</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/api-development.jpg" alt="API Development Work">
+                        <div class="gallery-overlay">
+                            <h4>RESTful APIs</h4>
+                            <p>Spring Boot</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/database-design.jpg" alt="Database Architecture">
+                        <div class="gallery-overlay">
+                            <h4>Database Design</h4>
+                            <p>MySQL & PostgreSQL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>What Colleagues Say</h2>
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Sruthi's technical expertise in API development and her ability to translate complex requirements into actionable solutions made her an invaluable team member."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Rajesh Kumar</h4>
+                                <span>Senior Technical Lead, Infosys</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Her data analysis skills and stakeholder communication abilities consistently delivered insights that drove our strategic decisions forward."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Priya Sharma</h4>
+                                <span>Business Analyst, Northwestern Mutual</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Exceptional problem-solving skills and attention to detail. Sruthi's contributions significantly improved our system reliability and performance."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <span>Project Manager, Northwestern Mutual</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <a href="mailto:muruganantham.s@northeastern.edu">muruganantham.s@northeastern.edu</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Phone:</strong>
+                            <a href="tel:5139685002">(513) 968-5002</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>LinkedIn:</strong>
+                            <a href="https://www.linkedin.com/in/sruthi-m18/" target="_blank" rel="noopener">linkedin.com/in/sruthi-m18</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Location:</strong>
+                            <span>Boston, Massachusetts</span>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sruthi Muruganantham. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
