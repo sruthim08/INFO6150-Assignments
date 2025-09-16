@@ -49,78 +49,189 @@
     </div>
 </section>
 
-        <!-- About Section -->
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
+<!-- Updated About Section HTML -->
+<section id="about" class="about-redesigned">
+    <div class="container">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <div class="section-divider"></div>
+        </div>
+        
+        <div class="about-layout">
+            <!-- Main Content Area -->
+            <div class="about-main">
+                <!-- Personal Introduction -->
+                <div class="intro-card">
+                    <div class="intro-content">
+                        <h3>Who I Am</h3>
                         <p>MS in Information Systems student with strong skills in business analysis, SQL, and stakeholder communication. Experienced in requirements gathering, process improvement, and KPI reporting.</p>
                         <p>Skilled in Agile methodologies, risk assessment, and translating technical results into business insights. Seeking opportunities to align technology solutions with organizational goals.</p>
+                        <div class="intro-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">2+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">Major Technologies</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skills-section">
-                        <h3>Technical Skills</h3>
-                        <table class="skills-table">
-                            <thead>
-                                <tr>
-                                    <th>Category</th>
-                                    <th>Technologies</th>
-                                    <th>Proficiency</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Programming</td>
-                                    <td>Java, Python, R, C</td>
-                                    <td>Advanced</td>
-                                </tr>
-                                <tr class="highlight-row">
-                                    <td>Analytics</td>
-                                    <td>SQL, Power BI, Tableau, Excel</td>
-                                    <td>Expert</td>
-                                </tr>
-                                <tr>
-                                    <td>Frameworks</td>
-                                    <td>Spring Boot, JUnit, Angular</td>
-                                    <td>Advanced</td>
-                                </tr>
-                                <tr class="highlight-row">
-                                    <td>Database</td>
-                                    <td>MySQL, PostgreSQL</td>
-                                    <td>Advanced</td>
-                                </tr>
-                                <tr>
-                                    <td>Cloud & DevOps</td>
-                                    <td>AWS CloudWatch, Git</td>
-                                    <td>Intermediate</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                </div>
+
+                <!-- Technical Skills Section -->
+                <div class="skills-card">
+                    <div class="card-header">
+                        <h3>Technical Expertise</h3>
+                        <p>My technical toolkit spans across multiple domains</p>
+                    </div>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <div class="category-icon programming"></div>
+                            <h4>Programming</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">R</span>
+                                <span class="skill-tag">C</span>
+                            </div>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill advanced"></div>
+                                <span class="proficiency-label">Advanced</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category featured">
+                            <div class="category-icon analytics"></div>
+                            <h4>Analytics & BI</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">Power BI</span>
+                                <span class="skill-tag">Tableau</span>
+                                <span class="skill-tag">Excel</span>
+                            </div>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill expert"></div>
+                                <span class="proficiency-label">Expert</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <div class="category-icon frameworks"></div>
+                            <h4>Frameworks</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Spring Boot</span>
+                                <span class="skill-tag">JUnit</span>
+                                <span class="skill-tag">Angular</span>
+                            </div>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill advanced"></div>
+                                <span class="proficiency-label">Advanced</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <div class="category-icon database"></div>
+                            <h4>Database</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                            </div>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill advanced"></div>
+                                <span class="proficiency-label">Advanced</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <div class="category-icon cloud"></div>
+                            <h4>Cloud & DevOps</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">AWS CloudWatch</span>
+                                <span class="skill-tag">Git</span>
+                            </div>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill intermediate"></div>
+                                <span class="proficiency-label">Intermediate</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Aside - Education & Achievements -->
-            <aside class="education-aside">
-                <div class="aside-content">
+            <!-- Sidebar -->
+            <aside class="about-sidebar">
+                <!-- Education Card -->
+                <div class="sidebar-card education-card">
+                    <div class="card-icon education-icon"></div>
                     <h3>Education</h3>
-                    <div class="education-item">
-                        <h4>Master of Science in Information Systems</h4>
-                        <p>Northeastern University, Boston</p>
-                        <span>Jan 2025 – May 2027</span>
+                    
+                    <div class="education-item current">
+                        <div class="education-header">
+                            <h4>Master of Science in Information Systems</h4>
+                            <span class="education-period current-period">Jan 2025 – May 2027</span>
+                        </div>
+                        <p class="institution">Northeastern University, Boston</p>
+                        <div class="education-status">Current Student</div>
                     </div>
+                    
                     <div class="education-item">
-                        <h4>Bachelor of Technology in IT</h4>
-                        <p>University College of Engineering, India</p>
-                        <span>Sept 2018 – Jun 2022</span>
+                        <div class="education-header">
+                            <h4>Bachelor of Technology in IT</h4>
+                            <span class="education-period">Sept 2018 – Jun 2022</span>
+                        </div>
+                        <p class="institution">University College of Engineering, India</p>
                     </div>
-                    <div class="achievement">
-                        <h4>Key Achievement</h4>
-                        <p>Placement Coordinator for IT Department (2021-2022)</p>
+
+                    <div class="education-item">
+                        <div class="education-header">
+                            <h4>Executive Programme in Data Science</h4>
+                            <span class="education-period">Sept 2021 - Oct 2022</span>
+                        </div>
+                        <p class="institution">IIIT Bangalore, India</p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card -->
+                <div class="sidebar-card achievement-card">
+                    <div class="card-icon achievement-icon"></div>
+                    <h3>Key Achievement</h3>
+                    <div class="achievement-content">
+                        <h4>Placement Coordinator</h4>
+                        <p>Led IT Department placement activities, coordinating between students and recruiters</p>
+                        <span class="achievement-period">2021 - 2022</span>
+                    </div>
+                </div>
+
+                <!-- Quick Contact -->
+                <div class="sidebar-card contact-quick">
+                    <h3>Let's Connect</h3>
+                    <div class="contact-links">
+                        <a href="mailto:muruganantham.s@northeastern.edu" class="contact-link email">
+                            <span class="contact-icon"></span>
+                            <span>Email Me</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sruthi-m18/" class="contact-link linkedin" target="_blank">
+                            <span class="contact-icon"></span>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="tel:5139685002" class="contact-link phone">
+                            <span class="contact-icon"></span>
+                            <span>Call Me</span>
+                        </a>
                     </div>
                 </div>
             </aside>
-        </section>
+        </div>
+    </div>
+</section>
+
+
 
         <!-- Experience Section -->
         <section id="experience" class="experience">
