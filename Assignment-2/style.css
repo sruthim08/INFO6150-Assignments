@@ -461,15 +461,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    color: var(--white);
+    font-size: 1.8rem;
+    background: rgba(52, 152, 219, 0.1);
+    border: 2px solid rgba(52, 152, 219, 0.2);
+    transition: all 0.3s ease;
 }
+.category-icon:hover {
+    background: rgba(52, 152, 219, 0.2);
+    transform: scale(1.1);
+}
+.category-icon.programming::before { content: "💻"; }
+.category-icon.analytics::before { content: "📊"; }
+.category-icon.frameworks::before { content: "🔧"; }
+.category-icon.database::before { content: "🗄️"; }
+.category-icon.cloud::before { content: "☁️"; }
 
-.category-icon.programming { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-.category-icon.analytics { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
-.category-icon.frameworks { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
-.category-icon.database { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
-.category-icon.cloud { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
 
 .skill-category h4 {
     text-align: center;
@@ -1160,7 +1166,6 @@ display: none;
     box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
 }
 
-/* Simplified Footer */
 .footer {
     background: var(--primary-color);
     color: var(--white);
@@ -1169,7 +1174,19 @@ display: none;
 }
 
 .footer .container {
-    display: block; /* Simplified layout */
+    display: block;
+}
+
+.copyright-main {
+    font-size: 1rem;
+    margin: 0 0 0.25rem 0;
+}
+
+.copyright-sub {
+    font-size: 0.8rem;
+    font-style: italic;
+    opacity: 0.8;
+    margin: 0;
 }
 
 /* Remove footer-links styles since they're no longer needed */
