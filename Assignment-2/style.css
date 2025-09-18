@@ -1133,36 +1133,46 @@ display: none;
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
 }
 
-/* Footer */
+/* Back to Top Button */
+.back-to-top-container {
+    background: var(--white);
+    padding: 2rem 0 1rem;
+    text-align: center;
+}
+
+.back-to-top {
+    background: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.back-to-top:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
+}
+
+/* Simplified Footer */
 .footer {
     background: var(--primary-color);
     color: var(--white);
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     text-align: center;
 }
 
 .footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: block; /* Simplified layout */
 }
 
-.footer-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.footer-links a {
-    color: var(--white);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: var(--secondary-color);
-}
+/* Remove footer-links styles since they're no longer needed */
 
 /* Responsive Design - iPad (768px) */
 @media (max-width: 768px) {
