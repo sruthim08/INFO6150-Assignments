@@ -2,7 +2,7 @@
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
-    --accent-color: #e74c3c;
+    --accent-color: #3765e2;
     --text-color: #333;
     --light-bg: #f8f9fa;
     --white: #ffffff;
@@ -300,6 +300,7 @@ body {
     grid-template-columns: 2fr 1fr;
     gap: 3rem;
     align-items: start;
+    max-height: calc(100vh - 200px);
 }
 
 /* Main Content Cards */
@@ -307,6 +308,40 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    padding-right: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-color) #f1f1f1;
+}
+/* Custom Scrollbar for Webkit browsers */
+.about-main::-webkit-scrollbar {
+    width: 8px;
+}
+
+.about-main::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.about-main::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 4px;
+}
+
+.about-main::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+/* Fixed Sidebar */
+.about-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: sticky;
+    top: 120px;
+    height: calc(100vh - 200px);
+    overflow: hidden; /* Prevent sidebar from scrolling */
 }
 
 .intro-card, .skills-card {
@@ -315,6 +350,7 @@ body {
     padding: 2.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0; 
 }
 
 .intro-card:hover, .skills-card:hover {
@@ -505,6 +541,35 @@ body {
     gap: 1.5rem;
     position: sticky;
     top: 120px;
+    max-height: calc(100vh - 140px); /* Allow natural height with max constraint */
+    overflow-y: auto; /* Add scrolling if needed */
+}
+/* Improve sidebar scrollbar if needed */
+.about-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.about-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.about-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(52, 152, 219, 0.3);
+    border-radius: 3px;
+}
+
+.about-sidebar::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Alternative: Remove height constraints entirely */
+.about-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: sticky;
+    top: 120px;
+    /* Let it size naturally */
 }
 
 .sidebar-card {
@@ -520,13 +585,7 @@ body {
 }
 
 .card-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+display: none;
 }
 
 .education-icon { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
@@ -596,12 +655,23 @@ body {
     font-weight: 600;
 }
 
-.achievement-content h4 {
+.achievement-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.achievement-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.achievement-item h4 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
-.achievement-content p {
+.achievement-item p {
     font-size: 0.9rem;
     color: #666;
     line-height: 1.5;
@@ -639,13 +709,7 @@ body {
     transform: translateX(5px);
 }
 
-.contact-icon {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--secondary-color);
-    flex-shrink: 0;
-}
+
 
 /* Responsive Design */
 @media (max-width: 968px) {
@@ -748,7 +812,7 @@ body {
 }
 
 .timeline-date {
-    background: var(--accent-color);
+    background: var(--secondary-color); /* Changed from accent-color to secondary-color */
     color: var(--white);
     padding: 4px 12px;
     border-radius: 20px;
@@ -765,7 +829,6 @@ body {
     margin-bottom: 0.5rem;
     line-height: 1.6;
 }
-
 /* Projects Section */
 .projects {
     padding: 100px 0;
@@ -836,7 +899,7 @@ body {
 }
 
 .project-btn:hover {
-    background: #c0392b;
+    background: #3765e2;
 }
 
 /* Gallery Section - Responsive UI Component with Hover Effects */
