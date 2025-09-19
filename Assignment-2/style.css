@@ -433,7 +433,7 @@ body {
     background: var(--primary-color);
 }
 
-/* Fixed Sidebar */
+/* Fixed Sidebar - Education positioned on the right */
 .about-sidebar {
     display: flex;
     flex-direction: column;
@@ -442,7 +442,27 @@ body {
     top: 120px;
     height: calc(100vh - 200px);
     margin-bottom: 3rem;
-    overflow: hidden; /* Prevent sidebar from scrolling */
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-color) #f1f1f1;
+}
+
+/* Custom scrollbar for sidebar */
+.about-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.about-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.about-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(52, 152, 219, 0.3);
+    border-radius: 3px;
+}
+
+.about-sidebar::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
 }
 
 .intro-card, .skills-card {
@@ -465,8 +485,6 @@ body {
     margin-bottom: 1.5rem;
     position: relative;
 }
-
-
 
 .intro-card p {
     font-size: 1.1rem;
@@ -503,7 +521,76 @@ body {
     letter-spacing: 1px;
 }
 
-/* Skills Section */
+/* Skills Section Table */
+.table-container {
+    margin: 2rem 0;
+    overflow-x: auto;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Table Basic Styling */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Header Row Styling */
+.skills-table thead tr {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Table Header and Data Cells */
+.skills-table th,
+.skills-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Table Header */
+.skills-table th {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+/* Zebra Striping for Rows */
+.skills-table tbody tr:nth-child(even) {
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+/* Row Hover Effect */
+.skills-table tbody tr:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Experience Level Styling */
+.expert-row td:nth-child(3) {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.advanced-row td:nth-child(3) {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.intermediate-row td:nth-child(3) {
+    color: #ffc107;
+    font-weight: bold;
+}
+
 .card-header {
     text-align: center;
     margin-bottom: 2.5rem;
@@ -520,164 +607,19 @@ body {
     font-style: italic;
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-}
-
-.skill-category {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    border-radius: 10px;
-    padding: 1.5rem;
-    border: 1px solid #e9ecef;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.skill-category.featured {
-    background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(52, 152, 219, 0.1) 100%);
-    border-color: var(--secondary-color);
-    transform: scale(1.02);
-}
-
-.skill-category:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-.category-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    background: rgba(52, 152, 219, 0.1);
-    border: 2px solid rgba(52, 152, 219, 0.2);
-    transition: all 0.3s ease;
-}
-.category-icon:hover {
-    background: rgba(52, 152, 219, 0.2);
-    transform: scale(1.1);
-}
-.category-icon.programming::before { content: "💻"; }
-.category-icon.analytics::before { content: "📊"; }
-.category-icon.frameworks::before { content: "🔧"; }
-.category-icon.database::before { content: "🗄️"; }
-.category-icon.cloud::before { content: "☁️"; }
-
-.skill-category h4 {
-    text-align: center;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
-
-.skill-tag {
-    background: var(--secondary-color);
-    color: var(--white);
-    padding: 4px 10px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
-.proficiency-bar {
-    position: relative;
-    background: #e9ecef;
-    height: 6px;
-    border-radius: 3px;
-    overflow: hidden;
-    margin-bottom: 0.5rem;
-}
-
-.proficiency-fill {
-    height: 100%;
-    border-radius: 3px;
-    transition: width 0.8s ease;
-}
-
-.proficiency-fill.expert { 
-    width: 95%; 
-    background: linear-gradient(90deg, #28a745, #20c997); 
-}
-
-.proficiency-fill.advanced { 
-    width: 85%; 
-    background: linear-gradient(90deg, #007bff, #6610f2); 
-}
-
-.proficiency-fill.intermediate { 
-    width: 70%; 
-    background: linear-gradient(90deg, #ffc107, #fd7e14); 
-}
-
-.proficiency-label {
-    font-size: 0.8rem;
-    color: #666;
-    text-align: center;
-    display: block;
-    font-weight: 600;
-}
-
-/* Sidebar */
-.about-sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    position: sticky;
-    top: 120px;
-    max-height: calc(100vh - 140px); /* Allow natural height with max constraint */
-    overflow-y: auto; /* Add scrolling if needed */
-}
-
-/* Improve sidebar scrollbar if needed */
-.about-sidebar::-webkit-scrollbar {
-    width: 6px;
-}
-
-.about-sidebar::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.about-sidebar::-webkit-scrollbar-thumb {
-    background: rgba(52, 152, 219, 0.3);
-    border-radius: 3px;
-}
-
-.about-sidebar::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary-color);
-}
-
+/* Sidebar Cards Styling */
 .sidebar-card {
     background: var(--white);
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
 .sidebar-card:hover {
     transform: translateY(-3px);
 }
-
-.card-icon {
-    display: none;
-}
-
-.education-icon { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-.achievement-icon { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
 
 .sidebar-card h3 {
     color: var(--primary-color);
@@ -686,6 +628,7 @@ body {
     text-align: center;
 }
 
+/* Education Section in Sidebar */
 .education-item {
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
@@ -702,6 +645,7 @@ body {
     padding: 1rem;
     border-radius: 8px;
     border: 1px solid rgba(52, 152, 219, 0.2);
+    border-bottom: 1px solid rgba(52, 152, 219, 0.2);
 }
 
 .education-header {
@@ -733,16 +677,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.education-status {
-    background: var(--accent-color);
-    color: var(--white);
-    padding: 3px 10px;
-    border-radius: 12px;
-    font-size: 0.8rem;
-    display: inline-block;
-    font-weight: 600;
-}
-
+/* Achievement Section in Sidebar */
 .achievement-item {
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
@@ -772,29 +707,9 @@ body {
     font-weight: 600;
 }
 
-/* Quick Contact */
-.contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.contact-link {
-    display: flex;
-    align-items: center;
-    padding: 0.75rem;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-radius: 8px;
-    text-decoration: none;
-    color: var(--text-color);
-    transition: all 0.3s ease;
-    gap: 0.75rem;
-}
-
-.contact-link:hover {
-    background: var(--secondary-color);
-    color: var(--white);
-    transform: translateX(5px);
+/* Card Icons (hidden by default) */
+.card-icon {
+    display: none;
 }
 
 /* Experience Section */
@@ -1242,31 +1157,33 @@ body {
         font-size: 1.3rem;
     }
 
+    /* Mobile About Section Layout */
     .about-layout {
         grid-template-columns: 1fr;
         gap: 2rem;
-        max-height: none; /* Remove the fixed height constraint */
-        height: auto;
-    }
-     .about-redesigned {
-        min-height: auto; /* Remove the 100vh constraint */
+        max-height: none;
         height: auto;
     }
     
+    .about-redesigned {
+        min-height: auto;
+        height: auto;
+    }
+    
+    /* Stack sidebar below main content on mobile */
     .about-sidebar {
-         height: auto;
+        height: auto;
         max-height: none;
-        margin-bottom: 40px; 
+        margin-bottom: 40px;
+        position: static;
+        order: 2;
     }
 
     .about-main {
-        max-height: none; /* Remove scrolling on small screens */
+        max-height: none;
         overflow-y: visible;
         height: auto;
-    }
-    
-    .skills-grid {
-        grid-template-columns: 1fr;
+        order: 1;
     }
     
     .intro-stats {
@@ -1369,10 +1286,6 @@ body {
 
     .gallery-grid {
         grid-template-columns: 1fr;
-    }
-
-    .skills-section {
-        min-width: 100%;
     }
 
     .skills-table {
