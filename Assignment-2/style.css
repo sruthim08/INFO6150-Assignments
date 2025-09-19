@@ -211,6 +211,41 @@ body {
     margin-top: 3rem;
 }
 
+.hero-subtitle {
+  white-space: nowrap;
+}
+
+.role-text::before {
+  content: "Software Engineer";
+  animation: roles 7s infinite;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes roles {
+  0%, 22% {
+    content: "Software Engineer";
+  }
+  25%, 47% {
+    content: "Data Analyst";
+  }
+  50%, 72% {
+    content: "Business Analyst";
+  }
+  75%, 97% {
+    content: "Backend Developer";
+  }
+  
+}
+
 /* Modern Button Styles */
 .btn-primary, .btn-secondary {
     padding: 15px 40px;
@@ -783,6 +818,7 @@ display: none;
 
 .experience h2 {
    font-size: 2.8rem;
+  text-align: center;
     color: var(--primary-color);
     margin-bottom: 1rem;
     font-weight: 300;
@@ -954,11 +990,13 @@ display: none;
 }
 
 .gallery h2 {
-    font-size: 2.8rem;
+ 
+
+
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-weight: 300;
-    letter-spacing: 1px;
 }
 
 .gallery-divider{
