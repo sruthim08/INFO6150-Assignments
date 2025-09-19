@@ -441,6 +441,7 @@ body {
     position: sticky;
     top: 120px;
     height: calc(100vh - 200px);
+    margin-bottom: 3rem;
     overflow: hidden; /* Prevent sidebar from scrolling */
 }
 
@@ -808,6 +809,7 @@ body {
     margin: 0 auto;
     position: relative;
     text-align: left;
+     padding-top: 1rem;
 }
 
 .timeline::before {
@@ -1243,10 +1245,24 @@ body {
     .about-layout {
         grid-template-columns: 1fr;
         gap: 2rem;
+        max-height: none; /* Remove the fixed height constraint */
+        height: auto;
+    }
+     .about-redesigned {
+        min-height: auto; /* Remove the 100vh constraint */
+        height: auto;
     }
     
     .about-sidebar {
-        position: static;
+         height: auto;
+        max-height: none;
+        margin-bottom: 40px; 
+    }
+
+    .about-main {
+        max-height: none; /* Remove scrolling on small screens */
+        overflow-y: visible;
+        height: auto;
     }
     
     .skills-grid {
